@@ -1,0 +1,167 @@
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #f1f1f1;
+	color: #2b2b2b;
+}
+p{
+	text-indent: 2em;
+	margin: 0;
+	margin-bottom: 8px;
+	line-height: 1.5;
+}
+.main{
+	max-width: 415px;
+	width: 100%;
+	margin: auto;
+	background: #fff;
+	box-shadow: 2px 3px 10px #999;
+}
+.main .box{
+	padding: 16px;
+}
+.main img,
+.main video{
+	max-width: 100%;
+	vertical-align: middle;
+}
+.main .img{
+	text-align: center;
+	text-indent: 0em;
+	margin: 0;
+}
+.main .wx-box{
+	padding: 0;
+	margin: 0 16px;
+	padding: 8px;
+	font-size: 15px;
+	text-align: center;
+	border: 1px dashed #22be0e;
+}
+.main .wx-box .wx-b{
+	color: #1aad17;
+	font-weight: bold;
+	font-size: 17px;
+}
+.main .wx-box p{
+	text-indent: 0;
+}
+.wx-btn-box{
+	text-align: center;
+}
+.wx-btn-box .wx-btn{
+	display: inline-block;
+	background: #1aad17;
+	color: #fff;
+	width: 80%;
+	padding: 4px 0;
+	border-radius: 46px;
+}
+.wx-btn-box .wx-btn img{
+	max-width: 34px;
+	margin-right: 5px;
+}
+.wx-btn-box .wx-btn span{
+	vertical-align: middle;
+}
+.t-title{
+	text-align: center;
+	text-indent: 0;
+	background: #ffff00;
+	padding: 7px 0;
+}
+.img-box{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.img-box>div{
+	padding: 0px 5px;
+	width: 50%;
+}
+.copyright{
+	color: #999;
+	font-size: 13px;
+	text-align: center;
+	text-indent: 0;
+	padding: 16px 0;
+	margin: 0;
+}
+
+.fix-bottom{
+	display: flex;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	max-width: 415px;
+	background: #fff;
+	justify-content: space-between;
+	align-items: center;
+}
+.fix-bottom>div{
+	font-size: 15px;
+	padding: 8px 5px;
+	width: 100%;
+}
+.fix-bottom img{
+	width: 45px;
+}
+.wx-box-bottom{
+	text-align: right;
+}
+.fix-bottom .wx-btn{
+	font-size: 15px;
+	text-align: center;
+	width: 90%;
+	padding: 8px 0;
+	border-radius: 50px;
+	color: #fff;
+	background: #1aad17;
+	display: inline-block;
+	animation: scale 4s linear infinite;
+}
+@keyframes scale{
+	0%{transform: scale(1);}
+	12.5%{transform: scale(1.1);}
+	25%{transform: scale(1);}
+	37.5%{transform: scale(1.1);}
+	50%{transform: scale(1);}
+	100%{transform: scale(1);}
+}
+
+.right-fix{
+	position: fixed;
+	right: 5px;
+	top: 38%;
+	background: #fff;
+	border-radius: 100%;
+}
+.right-fix>div{
+	position: relative;
+	overflow: hidden;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+.right-fix span{
+	display: block;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	animation: lr 3s both infinite;
+	z-index: 2;
+	background: url(../image/wxggg.png);
+	background-size: cover;
+}
+@keyframes lr{
+	0%{left:-50px;opacity: 0.6;}
+	25%{left:100%;opacity: 0.2;}
+	50%{left:100%;opacity: 0.2;}
+	75%{left:-50px;opacity: 0.6;}
+	100%{left:-50px;opacity: 0.6;}
+}

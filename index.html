@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=no">
+<title>原石专家为你1对1为你解惑</title>
+<link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/jqueryui/1.10.4/css/jquery-ui.min.css">
+<style>
+    .gt-jmy-h5-dialog-custom-dialog-container.is-center {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .gt-jmy-h5-dialog-custom-dialog-container {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background: #fff;
+        max-width: 380px;
+    }
+
+    .wechat-modal-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 1.35869565rem;
+        position: relative;
+        background: #fff;
+        border-radius: 1.1888587rem;
+    }
+
+    #dialog {
+        z-index: 9999;
+        position: fixed;
+    }
+
+    .wechat-modal-content {
+        width: 100%;
+    }
+
+    .wechat-modal-content-copy {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .wechat-modal-container .close {
+        position: absolute;
+        right: 1.13224638rem;
+        top: 1.13224638rem;
+        z-index: 2;
+        cursor: pointer;
+        color: #999;
+        -webkit-text-stroke: 1rpx white; 
+    }
+    .antman-wechat-modal-icon {
+        font-family: "antman-wechat-modal-icon" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .iconguanbi::before {
+        content: "\e665";
+    }
+
+    .wechat-modal-content-copy .wechat-number-hand-copy {
+        font-size: 0.96240942rem;
+        color: #666;
+        text-align: center;
+        width: 16.02128623rem;
+        height: 4.07608696rem;
+        line-height: 4.07608696rem;
+        background: #f7f7f7;
+        border-radius: 0.67934783rem;
+        font-weight: 400;
+    }
+
+    .wechat-modal-content-copy .desc-hand-copy {
+        font-size: 1.13224638rem;
+        line-height: 1.69836957rem;
+        color: #000;
+        margin-bottom: 1.58514493rem;
+        margin-top: 0.67934783rem;
+        padding: 0 1.13224638rem;
+        text-align: center;
+        font-weight: 600;
+    }
+
+    .wechat-modal-content-copy .touch-tips {
+        color: #999;
+        font-size: 0.96240942rem;
+        line-height: 0.96240942rem;
+        font-weight: 400;
+        margin-top: 1.86820652rem;
+        margin-bottom: 0.50951087rem;
+    }
+
+    .mask {
+        display: none;
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 5000%;
+        background-color: black;
+        z-index:1001;
+        -moz-opacity: 0.8;
+        opacity:.80;
+        filter: alpha(opacity=80);
+    }
+</style>
+<script type="text/javascript" src="static/js/jquery-3.1.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>  
+<link href="static/css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+    	<video src="http://sxapi.whjjk888.com/upload/pagemod/9ojQ_2021.08.16/3019eb1ebf9ffe3c9dcbf2d140d1c823_1280_720.mp4" controls="controls" poster="http://sxapi.whjjk888.com/upload/pagemod/9ojQ_2021.08.16/cip_video_pic3019eb1ebf9ffe3c9dcbf2d140d1c823_5d2a73b0-5f7d-4ab5-97c2-68399a96e547.png" preload="metadata" playsinline="playsinline" webkit-playsinline="webkit-playsinline" x5-playsinline="x5-playsinline"></video>
+    	<p class="img"><img src="static/picture/1.jpg"></p>
+    	<p class="img"><img src="static/picture/2.jpg"></p>
+    	<div class="box">
+    		<p>大家好，我是余老师，我每个月都会去缅甸的翡翠市场精心挑选自己心仪的翡翠原石,运到自己的翡翠加工厂,根据料子的大小不同部位来制作手镯与挂件牌子！翠友可以加我微信一起交流：</p>
+    	</div>
+    	<div class="box wx-box">
+    		<p>买翡翠原石不靠运气</p>
+    		<p style="color: #f37934;"><strong>若你遇到翡翠挑选、购买、价格等问题</strong></p>
+    		<p class="wx-b">微信号：<span class="wxnum">{{wechat}}</span></p>
+    		<p>↑↑长按复制上方微信号为你解答↑↑</p>
+    	</div>
+    	<div class="box">
+    		<p>购买翡翠原石，人们先想到的是大商场和市场代购。可行外人并不了解，商场有着租金贵、人工高等问题，他们普遍在国内的二、三级市场拿货，成本相当高！羊毛出在羊身上，中间高昂的费用都得由消费者埋单了！</p>
+    		<p>我们在缅甸与各大场区的矿主都有合作，真正做到原产地采矿，自产自销。时刻为客户把好第一道关,低档原石一律淘汰!精心筛选的原石从矿区直达国内总公司！我们在货源，价格和质量上，具有性价比三重优势！即是一手货源，也是一手货源！没中间商，没有差价，只为保障客户的直接利益。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/3.jpg"></p>
+    	<!-- <div class="box">
+    		<p>这是我写的书，书中详细记载我多年对翡翠行业的个人见解，翡翠原石的由来，怎么去辨别翡翠原石，如何去挑选翡翠原石等等，感兴趣的朋友可以看看，也可以加我团队微信了解</p>
+    	</div>
+    	<div class="wx-btn-box">
+    		<span class="wx-btn">
+    			<img src="http://sxapi.whjjk888.com/upload/pagemod/9ojQ_2021.08.16/wechat.png">
+    			<span>点击复制添加微信</span>
+    		</span>
+    	</div>
+    	<br/>
+    	<p class="img"><img src="http://sxapi.whjjk888.com/upload/pagemod/9ojQ_2021.08.16/4.jpg"></p> -->
+    	<div class="box">
+    		<p>买翡翠原石跟对人很重要，经验丰富的翡翠专家会教你如何识玉知识，客观分析，风险前置，想要买亏都很难。我们从事中高端翡翠原石行业已有20多年，团队里每个人对翡翠原石的认知都在十五年以上，在业内小有名气，用我们丰富的经验，在缅甸拥有自己的矿区和源头矿主直采渠道，保证了一手高品质货源，减少靠运气选石带来的风险，为翠友开出了不少百万级珍品翡翠。</p>
+    		<p>团队采购部由余老师亲自带队负责缅甸矿区采购毛料，长期混迹缅甸各大场口，对每个场口原石的品质、批次有自己独到见解，每天面对一手新鲜毛料，每块原石都精挑细选，不求数量，只收精品，保证从源头采购到物美价廉的好翡翠原石。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/5.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/6.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/7.jpg"></p>
+    	<div class="box">
+    		<p>国内翠友境况，外商原石资源垄断严重。</p>
+    		<p>多年来，缅甸一直依仗自己是翡翠出产大国，对翡翠实行垄断经营，国内的翡翠要价高昂，翡翠的品质却远对不起它的价格。每每听到国人又被缅商坑骗赔钱时，在缅华商都气愤不已！</p>
+    	</div>
+    	<p class="t-title">（↓↓公盘高价竞标翡翠↓↓） </p>
+
+    	<div class="img-box">
+    		<div><img src="static/picture/8.jpg"></div>
+    		<div><img src="static/picture/9.jpg"></div>
+    	</div>
+    	<br>
+    	<p class="img"><img src="static/picture/6.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/10.jpg"></p>
+    	<div class="box">
+    		<p style="color: #b8312f;">在缅华人强势出手，为国内翠友搭建绿色购翠通道。</p>
+    		<p>现今，凭借自己的矿场优势，再联合其他在缅华人资源，着力为国内爱翠之人开辟翡翠原石绿色通道，国内翠友专享矿区直接选石，缅甸直发，0加价，让利国内翠友以最亲民的价格买高质的翡翠原石。</p>
+    		<p>除了价格让利外，还提供一系类配套服务，打消所有售后隐患。</p>
+    	</div>
+    	<div style="border:1px dashed #b8312f;margin:16px;padding:8px;">
+    		<p>这一次高起点买原石，假货、尾货、高价货，我们都不要多年来国人买的翡翠原石总是“来路不明”，你永远不会知道你花高价买的翡翠原石到底在最初是什么地位，什么面貌？</p>
+    	</div>
+    	<div class="box wx-box">
+    		<p>买翡翠原石不靠运气</p>
+    		<p style="color: #f37934;"><strong>若你遇到翡翠挑选、购买、价格等问题</strong></p>
+    		<p class="wx-b">微信号：<span class="wxnum">{{wechat}}</span></p>
+    		<p>↑↑长按复制上方微信号为你解答↑↑</p>
+    	</div>
+    	<div class="box">
+    		<p>也许是一块不起眼的原石，经过层层中间商之手，加价贴标签，辗转到你手中，却被炒作成所谓的“高货”；又或是商家随便去缅甸土著手中低价淘来的翡翠尾货，回国后连蒙带骗的忽悠一些翡翠新手；品质稍微好点的原石，价格就是普通人难以触及的标准。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/11.jpg"></p>
+    	<div class="box">
+    		<p>本次为国人开辟的购翠绿色通道，首次公开各个环节，从矿区原石出土—选料—包装转运—加工—成品，所有环节公开透明，可随时查验原石来源，商家资质等。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/12.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/13.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/6.jpg"></p>
+    	<br>
+    	<div class="box">
+    		<p style="background: #fff700;font-weight: bold;text-indent: 0;padding:8px;font-size: 17px;">拥有自有矿场，保证一手货源</p>
+    		<p>我们在缅甸有自己的矿场，确保货源稳定，都是一手货源，无中间商赚取差价。并且与缅甸各大矿主关系密切，只为确保能够拿到源头货。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/14.jpg"></p>
+    	<div class="box">
+    		<p style="background: #fff700;font-weight: bold;text-indent: 0;padding:8px;font-size: 17px;">十五年专业原石采购师源头收货 </p>
+    		<p>团队采购部均15年以上经验丰富的老师傅负责缅甸矿区采购毛料，长期混迹缅甸各大场口，对每个场口原石的品质、批次有自己独到见解，每天面对一手新鲜毛料，每块原石都精挑细选，不求数量，只收精品，保证从源头采购到物美价廉的好翡翠原石。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/15.jpg"></p>
+    	<div class="box">
+    		<p style="background: #fff700;font-weight: bold;text-indent: 0;padding:8px;font-size: 17px;">直播现场全程透明&余老师亲自把关</p>
+    		<p>
+    			<span style="color: #b8312f;">直播间的翡翠原石均由我带领的专家组精心挑选分级</span>,再由直播间师傅上架，消费者只需根据自身实际需求价格出发，最终来决定是否要购买原石。直播间每天真现切现拍，360度无死角，<span style="color: #b8312f;">对于我们自己原石品质的自信，在我这的翡翠原石买亏双倍赔</span>，只为最大限度降低翠友购买风险。并且每天拿出部分精品原石半价福利放漏给大家，有喜欢的朋友不要错过。 
+    		</p>
+    	</div>
+    	<p class="img"><img src="static/picture/16.jpg"></p>
+    	<div class="box">
+    		<p>消费者只需根据自身实际需求以及价格考量来出发，最终来决定是否要购买原石。在一定程度上为消费者规避了翡翠原石的知识盲区，减少套路，透明公开交易。另外直播间内有很多原石爱好者一同在线围观，监督性强，操作规范有保障。</p>
+    	</div>
+    	<div class="box wx-box">
+    		<p>买翡翠原石不靠运气</p>
+    		<p style="color: #f37934;"><strong>若你遇到翡翠挑选、购买、价格等问题</strong></p>
+    		<p class="wx-b">微信号：<span class="wxnum">{{wechat}}</span></p>
+    		<p>↑↑长按复制上方微信号为你解答↑↑</p>
+    	</div>
+    	<br>
+    	<!-- <p class="img"><img src="http://sxapi.whjjk888.com/upload/pagemod/9ojQ_2021.08.16/17.jpg"></p> -->
+    	<!-- <p class="img"><img src="http://sxapi.whjjk888.com/upload/pagemod/9ojQ_2021.08.16/18.jpg"></p> -->
+    	<div class="box">
+    		<p style="background: #fff700;font-weight: bold;text-indent: 0;padding:8px;font-size: 17px;">私人定制，翡翠玉雕，价值翻倍涨</p>
+    		<p>由翡翠高级雕刻大师李安带队充分挖掘翡翠价值，即使翡翠偶有瑕疵也会“变废为宝”成为翡翠的独特点睛之处，全程为您的每一块翡翠原石的价值保价护航。</p>
+    	</div>
+    	<p class="img"><img src="static/picture/19.jpg"></p>
+    	<div class="box">
+    		<p>我们为助力翠友充分挖掘翡翠价值，私人订制，与业界翡翠工艺大师，翡翠高级工程师强强合作，即使翡翠偶有瑕疵也会“变废为宝”成为翡翠的独特点睛之处，全程为您的每一块翡翠原石的价值保价护航。</p>
+    	</div>
+    	<div class="box wx-box">
+    		<div class="wx-btn-box">
+	    		<span class="wx-btn">
+	    			<img src="static/picture/wechat.png">
+	    			<span>点击复制添加微信</span>
+	    		</span>
+	    	</div>
+	    	<br>
+    		<p>↑↑点击复制上方微信号了解更多↑↑</p>
+    		<p style="color: #41a85f;font-size: 18px;font-weight: bold;">立即预约国内原石理财直播间</p>
+    	</div>
+    	<br>
+    	<p class="img"><img src="static/picture/6.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/20.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/21.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/6.jpg"></p>
+    	<br>
+    	<p class="img"><img src="static/picture/22.jpg"></p>
+    	<div class="box">
+    		<p>树立翡翠行业品牌，将翡翠文化推向世界。数十年来，我们扎根翡翠源、塑造口碑，凭借一手货源价格与丰富鉴定经验，我们正大踏步占据互联网翡翠原石的地位，而未来，我们的使命是代表中国的民族文化，走向世界舞台，服务全球翡翠朋友。如果您还有不放心的，在我们这边的原石您大可去随便找人对比，在我们这买亏，所买的原石不值这个钱免费送</p>
+    	</div>
+    	<p class="img"><img src="static/picture/23.jpg"></p>
+    	<br>
+    	<div class="box wx-box">
+    		<p>买翡翠原石不靠运气</p>
+    		<p style="color: #f37934;"><strong>若你遇到翡翠挑选、购买、价格等问题</strong></p>
+    		<p class="wx-b">微信号：<span class="wxnum" id="target">{{wechat}}</span></p>
+    		<p>↑↑长按复制上方微信号为你解答↑↑</p>
+    	</div>
+    	<br>
+    	<p class="copyright">模板查看</p>
+    	<br>
+    	<br>
+    	<br>
+
+    	<!-- 底部浮窗 -->
+    	<div class="fix-bottom wx-btn">
+    		<div>
+    			<img src="static/picture/wicon.png">
+    			<span>添加微信听专家讲解</span>
+    		</div>
+    		<div class="wx-box-bottom" style="width: 50%;">
+    			<span class="wx-btn" data-clipboard-action="copy" data-clipboard-target="#target">+ 微信</span>
+    		</div>
+    	</div>
+
+    	<!-- 右侧浮窗 -->
+    	<div class="right-fix">
+    		<div class="wx-btn">
+    			<span class="ggg"></span>
+    			<img src="static/picture/wicon.png">
+    		</div>
+    	</div>
+
+    </div>
+
+    
+
+    <div class="mask"></div>
+
+    <div id="dialog" class="gt-jmy-h5-dialog-custom-dialog-container is-center" style="width: 80%; text-align: center; border-radius: 21px; display: none"><!----> 
+        <div data-v-ad483512="" class="wechat-modal-container"><i data-v-ad483512="" class=""></i> <p class="icon"></p><i class="fa fa-times close" aria-hidden="true"></i> </p><div data-v-ad483512="" class="wechat-modal-content"><!----> <div data-v-ad483512="" class="wechat-modal-content-copy"><div data-v-ad483512="" class="desc-hand-copy">
+                        添加微信好友，免费领取翡翠原石（仅限今日）
+                    </div> <div data-v-ad483512="" class="wechat-number-hand-copy">
+                        微信号:
+                        <span data-v-ad483512="" id="wechat-copy-btn" class="number-content wxnum">{{wechart}}</span></div> <!----> <div data-v-ad483512="" class="touch-tips">
+                        长按复制微信号，去微信搜索添加
+                    </div></div> <!----> <!----> <!----> <!----></div> <!----> <!----></div></div>
+    
+</body>
+<script>    
+    $(document).ready(function(){      
+        // var clipboard = new Clipboard('.wx-btn');    
+        // clipboard.on('success', function(e) {    
+        //     alert("微信号复制成功",1500);
+        //     window.location.href='weixin://';
+        //     e.clearSelection();    
+        //     console.log(e.clearSelection);    
+        // }); 
+
+
+
+        $( ".wx-btn" ).click(function() {
+            $(".mask").show();
+            $("#dialog").show();
+        });
+
+        $( ".close" ).click(function() {
+            $(".mask").hide();
+            $("#dialog").hide();
+        });
+
+        $('.wxnum').html('wi23097');
+
+
+
+    });    
+</script>    
+</html>
